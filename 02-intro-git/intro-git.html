@@ -13089,7 +13089,7 @@ div#notebook {
 
 <!-- Loading mathjax macro -->
 <!-- Load mathjax -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_HTML"></script>
     <!-- MathJax configuration -->
     <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -13116,33 +13116,26 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1><center>
-Control de versiones con Git y Github
-</center></h1>
+<center>
+    <h1>Control de versiones con Git y Github</h1>
+    <img src="images/final_doc.gif" width=50%>
+</center>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<center><img src="images/final_doc.gif" width=50%></center>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Qu&#233;-es-control-de-versiones?">Qu&#233; es control de versiones?<a class="anchor-link" href="#Qu&#233;-es-control-de-versiones?">&#182;</a></h2><p>Es un sistema que registra cambios a un archivo o conjunto de archivos durante el tiempo de manera que podamos obtener versiones específicas después.</p>
+<h1 id="Qu&#233;-es-control-de-versiones?">Qu&#233; es control de versiones?<a class="anchor-link" href="#Qu&#233;-es-control-de-versiones?">&#182;</a></h1><p>Es un sistema que registra cambios a un archivo o conjunto de archivos durante el tiempo de manera que podamos obtener versiones específicas después.</p>
 <ul>
 <li>Permite regresar un archivo a un estado anterior.</li>
 <li>Revertir todo el proyecto a un estado anterior.</li>
 <li>Comparar cambios en el tiempo.</li>
-<li>Ver quien modificó un archivo que pueda estar fallando.
-<center>
-<img src="images/kermit.jpg" width=50%>
-</center><h3><center> Es una forma de protegernos de nosotros mismos.</center></h3></li>
+<li>Ver quien modificó un archivo que pueda estar fallando.</li>
 </ul>
-
+<center>
+    <img src="images/kermit.jpg" width=50%>
+</center>
 </div>
 </div>
 </div>
@@ -13185,7 +13178,9 @@ Los problemas obvios de este sistema, es que al fallar el servidor central duran
 <li>Fue creado por <em>Linus Torvalds</em> y la comunidad en 2005.</li>
 <li>Se usó y desarrolló para la creación del Kernel de Linux</li>
 </ul>
-<p>Algunos de los objetivos de diseño del sistema son:</p>
+<center>
+    <img src="images/linus_finger.png" width=30%>
+</center><p>Algunos de los objetivos de diseño del sistema son:</p>
 <ul>
 <li>Velocidad.</li>
 <li>Diseño simple.</li>
@@ -13194,7 +13189,7 @@ Los problemas obvios de este sistema, es que al fallar el servidor central duran
 <li>Capaz de manejar proyectos muy grandes eficientemente.</li>
 </ul>
 <center>
-<img src="images/git.png" width=50%>
+<img src="images/git.png" width=30%>
 </center>
 </div>
 </div>
@@ -13202,7 +13197,9 @@ Los problemas obvios de este sistema, es que al fallar el servidor central duran
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Qu&#233;-nos-aporta-GIT?">Qu&#233; nos aporta GIT?<a class="anchor-link" href="#Qu&#233;-nos-aporta-GIT?">&#182;</a></h2><ul>
+<h2 id="Qu&#233;-nos-aporta-GIT?">Qu&#233; nos aporta GIT?<a class="anchor-link" href="#Qu&#233;-nos-aporta-GIT?">&#182;</a></h2><center>
+    <img src="images/git_graph.png">
+</center><ul>
 <li>Auditoría completa del código, sabiendo en todo momento quién ha tocado algo, cuándo y qué.</li>
 </ul>
 <ul>
@@ -13222,8 +13219,10 @@ Los problemas obvios de este sistema, es que al fallar el servidor central duran
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Instalaci&#243;n-de-GIT-en-Linux">Instalaci&#243;n de GIT en Linux<a class="anchor-link" href="#Instalaci&#243;n-de-GIT-en-Linux">&#182;</a></h2><p>Si quieres instalar Git en Linux, en general puedes hacerlo a través de una <strong>terminal</strong>, la herramienta básica de gestión de paquetes que trae tu distribución.</p>
-<p><code>sudo apt-get install git</code></p>
+<div class="highlight"><pre><span></span>sudo apt-get install git
+</pre></div>
 <p>Para consultar la instalación de Git en Windows o Mac entre al siguiente <a href="https://git-scm.com/book/es/v1/Empezando-Instalando-Git#Instalando-en-Linux">enlace.</a></p>
+<hr>
 
 </div>
 </div>
@@ -13231,8 +13230,15 @@ Los problemas obvios de este sistema, es que al fallar el servidor central duran
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Antes-de-empezar...">Antes de empezar...<a class="anchor-link" href="#Antes-de-empezar...">&#182;</a></h2><p>Lo mas importante a recordar es que Git es distribuido, por lo que tendremos un repositorio <strong>local</strong> que vive en un directorio oculto llamado <code>.git/</code> y normalmente (aunque no es obligación) tendremos un <strong>remoto</strong>, un repositorio central donde diferentes colaboradores puede contribuir su código.</p>
-<p>Notando que cada uno de esos colaboradores tienen una <strong>copia exacta</strong> de el repositorio en su estación de trabajo.</p>
+<h2 id="Flujo-de-trabajo">Flujo de trabajo<a class="anchor-link" href="#Flujo-de-trabajo">&#182;</a></h2><ol>
+<li><span style="color:red">**Modificamos**</span> los archivos en el directorio de trabajo.</li>
+</ol>
+<ol>
+<li>Escogemos los cambios que queremos guardar y los <span style="color:green">**añadimos**</span> al área de preparación.</li>
+</ol>
+<ol>
+<li>Hacemos una <span style="color:gray">**confirmación**</span>, que toma los archivos en el área de preparación y guarda ese estado en el directorio git.</li>
+</ol>
 
 </div>
 </div>
@@ -13261,30 +13267,14 @@ Los problemas obvios de este sistema, es que al fallar el servidor central duran
 <h2 id="Local---Tres-directorios">Local - Tres directorios<a class="anchor-link" href="#Local---Tres-directorios">&#182;</a></h2><center>
 <img src="images/3_states.png" width=50%>
 </center><ul>
-<li>El <code>repositorio git</code> es donde Git guarda los metadatos y cambios que se han hecho al proyecto. Es la parte mas importante de Git.</li>
+<li>El <code>directorio .git/</code> es donde Git guarda los metadatos y cambios <span style="color:gray">**confirmados**</span> que se han hecho al proyecto. Es la parte mas importante de Git. </li>
 </ul>
 <ul>
-<li>El <code>directorio de trabajo</code> es un solo una versión del proyecto. Estos archivos se sacan de los datos comprimidos que se encuentran en el <strong>directorio git</strong> y se dejan en el disco para uso o modificación.</li>
+<li>El <code>directorio de trabajo</code> es un solo una versión del proyecto. Estos archivos se sacan de los datos comprimidos que se encuentran en el <strong>directorio git</strong> y se dejan en el disco para  <span style="color:red">**modificación**</span>.</li>
 </ul>
 <ul>
-<li>El <code>área de preparación</code> es un archivo que guarda la información de los cambios y archivos que el usuario guardará a continuación.</li>
+<li>El <code>área de preparación</code> es un archivo que guarda la información de los cambios <span style="color:green">**preparados**</span> y archivos que el usuario guardará.</li>
 </ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Flujo-de-trabajo">Flujo de trabajo<a class="anchor-link" href="#Flujo-de-trabajo">&#182;</a></h2><ol>
-<li><span style="color:red">**Modificamos**</span> los archivos en el directorio de trabajo.</li>
-</ol>
-<ol>
-<li>Escogemos los cambios que queremos guardar y los <span style="color:green">**añadimos**</span> al área de preparación.</li>
-</ol>
-<ol>
-<li>Hacemos una <span style="color:gray">**confirmación**</span>, que toma los archivos en el área de preparación y guarda ese estado en el directorio git.</li>
-</ol>
 
 </div>
 </div>
@@ -13430,7 +13420,7 @@ git diff
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Revertir-cambios">Revertir cambios<a class="anchor-link" href="#Revertir-cambios">&#182;</a></h2><h4 id="Directorio-de-trabajo">Directorio de trabajo<a class="anchor-link" href="#Directorio-de-trabajo">&#182;</a></h4><ol>
+<h2 id="Revertir-cambios">Revertir cambios<a class="anchor-link" href="#Revertir-cambios">&#182;</a></h2><h4 id="**Directorio-de-trabajo**"><span style="color:red">**Directorio de trabajo**</span><a class="anchor-link" href="#**Directorio-de-trabajo**">&#182;</a></h4><ol>
 <li>Modificar el archivo <code>AUTORES.md</code> agregando un nombre.</li>
 <li>Podemos revertir el cambio usando</li>
 </ol>
@@ -13453,7 +13443,7 @@ git checkout <span class="s">&lt;&lt;hash</span>&gt;&gt; AUTORES.md
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Revertir-cambios">Revertir cambios<a class="anchor-link" href="#Revertir-cambios">&#182;</a></h2><h4 id="&#193;rea-de-preparaci&#243;n">&#193;rea de preparaci&#243;n<a class="anchor-link" href="#&#193;rea-de-preparaci&#243;n">&#182;</a></h4><ol>
+<h2 id="Revertir-cambios">Revertir cambios<a class="anchor-link" href="#Revertir-cambios">&#182;</a></h2><h4 id="**&#193;rea-de-preparaci&#243;n**"><span style="color:green">**&#193;rea de preparaci&#243;n**</span><a class="anchor-link" href="#**&#193;rea-de-preparaci&#243;n**">&#182;</a></h4><ol>
 <li>Crear o modificar <code>AUTORES.md</code> y agregarlo al área de preparación.</li>
 <li>Podemos quitar los archivos de esta area usando.</li>
 </ol>
@@ -13470,7 +13460,7 @@ git reset
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Revertir-cambios">Revertir cambios<a class="anchor-link" href="#Revertir-cambios">&#182;</a></h2><h4 id="Repositorio-Git">Repositorio Git<a class="anchor-link" href="#Repositorio-Git">&#182;</a></h4><ol>
+<h2 id="Revertir-cambios">Revertir cambios<a class="anchor-link" href="#Revertir-cambios">&#182;</a></h2><h4 id="**Repositorio-Git**"><span style="color:gray">**Repositorio Git**</span><a class="anchor-link" href="#**Repositorio-Git**">&#182;</a></h4><ol>
 <li>Crear o modificar <code>AUTORES.md</code> y realizar un commit para guardar los cambios. </li>
 <li>Podemos quitar los archivos de esta area usando.</li>
 </ol>
@@ -13484,18 +13474,6 @@ git reset --soft HEAD^
 git reset --hard HEAD^
 </pre></div>
 
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Trabajando-con-Remoto">Trabajando con Remoto<a class="anchor-link" href="#Trabajando-con-Remoto">&#182;</a></h1><p>Hasta el momento conocemos el trabajo en <strong>Local</strong> y el manejo de un repositorio en el mismo equipo.</p>
-<p>Anteriormente las empresas de desarrollo o universidades creaban su código de manera privada. Si estas ya usaban <strong>git</strong> configuraban un equipo extra que sería el <strong>remoto</strong> y ahí guardan los cambios, en el mejor de los casos.</p>
-<p>En el peor, se comparten los desarrollos usando una usb y limitan la colaboración de múltiples personas.</p>
-<center>
-<img src="images/facepalm.jpg" width=30%>
-</center>
 </div>
 </div>
 </div>
@@ -13518,13 +13496,16 @@ git reset --hard HEAD^
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Taller-de-Github">Taller de Github<a class="anchor-link" href="#Taller-de-Github">&#182;</a></h2><ol>
-<li>Cree una cuenta en www.github.com</li>
+<li>Entrar y crear una cuenta en www.github.com</li>
 </ol>
 <ol>
-<li>(El ejercicio se hará en parejas, cada uno de los estudiantes debe asumir un rol A y B)</li>
+<li>(El ejercicio se hará en parejas, cada uno de los estudiantes debe asumir un rol A o B)</li>
 </ol>
 <ol>
-<li>El estudiante A debe crear un repositorio <strong>VACIO</strong> usando la plataforma.</li>
+<li>El estudiante A debe crear un repositorio <strong>VACIO</strong> usando GITHUB.</li>
+</ol>
+<ol>
+<li>En la sección <strong>SETTINGS</strong> y luego <strong>COLLABORATORS</strong> en el repositorio de GITHUB añadir al estudiante B como colaborador.</li>
 </ol>
 
 </div>
@@ -13534,15 +13515,18 @@ git reset --hard HEAD^
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Configurar-el-remoto">Configurar el remoto<a class="anchor-link" href="#Configurar-el-remoto">&#182;</a></h2><ol>
-<li>El estudiante <strong>A</strong> configura el remoto en su proyecto local usando:</li>
+<li>Estudiante <strong>A</strong> conecta el repositorio local con GITHUB.</li>
 </ol>
-<div class="highlight"><pre><span></span>git remote add origin &lt;&lt;URL_REPO&gt;&gt;
+<div class="highlight"><pre><span></span>git remote add origin URL_REPO
 git push -u origin master
 </pre></div>
 <ol>
-<li>El estudiante <strong>B</strong> en el escritorio clonará el repositorio del estudiante <em>A</em></li>
+<li><p>Estudiante <strong>B</strong> crea un nuevo directorio vacio para trabajar.</p>
+</li>
+<li><p>Estudiante <strong>B</strong> clona el repositorio creado en GITHUB.</p>
+</li>
 </ol>
-<div class="highlight"><pre><span></span>git clone &lt;&lt;URL_REPO&gt;&gt;
+<div class="highlight"><pre><span></span>git clone URL_REPO
 </pre></div>
 
 </div>
@@ -13554,11 +13538,25 @@ git push -u origin master
 <h2 id="Qu&#233;-acabamos-de-hacer?">Qu&#233; acabamos de hacer?<a class="anchor-link" href="#Qu&#233;-acabamos-de-hacer?">&#182;</a></h2><p>Para comunicarnos con Github debemos configurar el repositorio externo, un <strong>remoto</strong> al que llamamos <strong>origin</strong> para que podamos subir los cambios.</p>
 <div class="highlight"><pre><span></span>git remote add origin &lt;&lt;URL_REPO&gt;&gt;
 </pre></div>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <hr>
 <p>Este es un comando que dice <em>Suba todos los commits en la <strong>rama</strong> llamada master</em> al remoto llamado origin.</p>
 <div class="highlight"><pre><span></span>git push origin master
 </pre></div>
 <hr>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <p>Es usado para apuntar a un repo existente y hacer una copia en un nuevo directorio. Esto copia toda la historia del repositorio, todos los commits y la <strong>rama</strong> a la que apunta el repo remoto.</p>
 <div class="highlight"><pre><span></span>git clone &lt;&lt;URL_REPO&gt;&gt;
 </pre></div>
@@ -13570,13 +13568,14 @@ git push -u origin master
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Subiendo-cambios-y-archivos">Subiendo cambios y archivos<a class="anchor-link" href="#Subiendo-cambios-y-archivos">&#182;</a></h2><ol>
-<li>El estudiante <strong>A</strong> modifica el archivo <code>AUTHORS.md</code> agregando nuevos autores, hace COMMIT y sube los cambios a Github con</li>
+<li>El estudiante <strong>A</strong> modifica el archivo <code>AUTHORS.md</code> agregando nuevos autores, guarda los cambios en un COMMIT y sube los cambios a Github:</li>
 </ol>
 <div class="highlight"><pre><span></span>git push
 </pre></div>
 <ol>
-<li>El estudiante <strong>B</strong> modifica el archivo <code>README.md</code> añadiendo mas información, hace commit y sube los cambios a Github. Debe fallar y mostrar un mensaje de error.</li>
+<li>El estudiante <strong>B</strong> modifica el archivo <code>README.md</code> añadiendo mas información, hace commit y sube los cambios a Github.</li>
 </ol>
+<p>Debe fallar y mostrar un mensaje de error.</p>
 <ol>
 <li>El estudiante <strong>B</strong> obtiene los cambios que A subió a Github.</li>
 </ol>
@@ -13598,6 +13597,13 @@ git push -u origin master
 <h2 id="Qu&#233;-acabamos-de-hacer?">Qu&#233; acabamos de hacer?<a class="anchor-link" href="#Qu&#233;-acabamos-de-hacer?">&#182;</a></h2><p>Este comando se usa para subir el contenido de un repositorio local a un repositorio remoto. Se transfieren todos los commits.</p>
 <div class="highlight"><pre><span></span>git push
 </pre></div>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <hr>
 <p>Este comando es usado para descargar el contenido de un repositorio remotoe inmediatamente <strong>mezclar</strong> con el repositorio local para sincronizar el contenido.</p>
 <div class="highlight"><pre><span></span>git pull
@@ -13609,16 +13615,26 @@ git push -u origin master
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="C&#243;mo-funcionan-las-ramas?">C&#243;mo funcionan las ramas?<a class="anchor-link" href="#C&#243;mo-funcionan-las-ramas?">&#182;</a></h2><p>A partir de una base común podemos crear ramas para cada nueva funcionalidad, la idea con separar el proyecto en múltiples ramas es encapsular los cambios y hace mas dificil que código inestable se mezcle con la rama principal.</p>
+<center>
+<img src="images/branch.png" width=80%>
+</center>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Crear-una-rama-(branch)">Crear una rama (branch)<a class="anchor-link" href="#Crear-una-rama-(branch)">&#182;</a></h2><ol>
 <li>El estudiante <strong>A</strong> creará una rama en la linea de comandos y sube la nueva rama a Github</li>
 </ol>
-<div class="highlight"><pre><span></span>git checkout -b <span class="o">[</span>nombre_rama_A<span class="o">]</span>
-git push origin <span class="o">[</span>nombre_rama_A<span class="o">]</span>
+<div class="highlight"><pre><span></span>git checkout -b NOMBRE_RAMA_A
+git push origin NOMBRE_RAMA_A
 </pre></div>
 <ol>
-<li><p>El estudiante <strong>B</strong> creará una rama en la interfaz de Github.</p>
+<li><p>El estudiante <strong>B</strong> crea otra rama, siguiendo el mismo proceso.</p>
 </li>
-<li><p>El estudiante <strong>B</strong> verifica que las dos ramas existan en Github.</p>
+<li><p>Verificar que las dos ramas existan en Github.</p>
 </li>
 <li><p>El estudiante <strong>A</strong> mira la lista de ramas en linea de comandos.</p>
 </li>
@@ -13629,7 +13645,7 @@ git push origin <span class="o">[</span>nombre_rama_A<span class="o">]</span>
 <li>Ambos estudiantes obtienen las ramas que ahora se encuentran en Github y se cambian a la rama que han creado.</li>
 </ol>
 <div class="highlight"><pre><span></span>git fetch origin
-git checkout <span class="o">[</span>nombre_rama_X<span class="o">]</span>
+git checkout NOMBRE_RAMA_A
 </pre></div>
 
 </div>
@@ -13668,12 +13684,61 @@ git fetch origin <span class="o">[</span>nombre<span class="o">]</span>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="C&#243;mo-funcionan-las-ramas?">C&#243;mo funcionan las ramas?<a class="anchor-link" href="#C&#243;mo-funcionan-las-ramas?">&#182;</a></h2><p>A partir de una base común podemos crear ramas para cada nueva funcionalidad, la idea con separar el proyecto en múltiples ramas es encapsular los cambios y hace mas dificil que código inestable se mezcle con la rama principal.</p>
+<h2 id="C&#243;mo-funiona-un-Merge?">C&#243;mo funiona un Merge?<a class="anchor-link" href="#C&#243;mo-funiona-un-Merge?">&#182;</a></h2><p>Un merge es la forma de unir la historia de ramas separadas e integrarlas en una sola rama.</p>
+<p>Git automáticamente une los commits a menos que existan conflictos en ambas ramas.</p>
+<p><br></p>
 <center>
-<img src="images/branch.png" width=80%>
+    <img src="images/merge.png" width=80%>
 </center>
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ol>
+<li>Ambos estudiantes crean un archivo "calculadora.py" y añaden los  métodos correspondientes:</li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Estudiante A</span>
+<span class="k">def</span> <span class="nf">suma</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+
+<span class="k">def</span> <span class="nf">resta</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">-</span> <span class="n">b</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Estudiante B</span>
+<span class="k">def</span> <span class="nf">multiplicar</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">*</span> <span class="n">b</span>
+
+<span class="k">def</span> <span class="nf">dividir</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">b</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">a</span> <span class="o">/</span> <span class="n">b</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13682,34 +13747,31 @@ git fetch origin <span class="o">[</span>nombre<span class="o">]</span>
 <li>Ambos estudiantes deben estar en las diferentes ramas que han creado.</li>
 </ol>
 <ol>
-<li>Ambos estudiantes crean o modifican archivos, hacen múltiples commits y los suben a Github. Valientemente modifican el mismo archivo con cambios diferentes.</li>
+<li>Guardan los cambios al archivo "calculadora.py" haciendo un commit.</li>
 </ol>
 <ol>
-<li><p>El estudiante <strong>A</strong> se pasa a la rama MASTER y desde ahí hace un MERGE con la rama que el creó.</p>
-<div class="highlight"><pre><span></span>git checkout master
-git merge <span class="o">[</span>nombre_rama_A<span class="o">]</span>
+<li><p>Hacemos un merge con la rama principal.</p>
+<div class="highlight"><pre><span></span><span class="c1"># Cambiamos la rama MASTER</span>
+git checkout master
+<span class="c1"># Unimos las dos ramas</span>
+git merge NOMBRE_RAMA_A
 </pre></div>
 </li>
-<li><p>El estudiante <strong>B</strong> hace lo mismo del punto anterior con su rama.</p>
+<li><p>Estudiante <strong>B</strong> hace lo mismo del punto anterior con su rama.</p>
 </li>
 </ol>
 <ol>
-<li>Uno de los dos sube el MERGE que ha creado en master al remoto, y el otro deberá pasar a la rama MASTER y obtener los cambios.</li>
-</ol>
-<ol>
-<li><p>Una vez tiene los cambios, hace un MERGE para unir su rama con el master.</p>
-<div class="highlight"><pre><span></span>git merge <span class="o">[</span>nombre_rama<span class="o">]</span>
+<li><p>Estudiante <strong>A</strong> sube la rama MASTER al remoto (GITHUB).</p>
+</li>
+<li><p>Estudiante <strong>B</strong> obtiene los cambios de A en el MASTER del remoto (GITHUB)</p>
+</li>
+<li><p>Estudiante <strong>B</strong> hace un merge de su rama de trabajo con la rama master y sube los cambios a GITHUB.</p>
+<div class="highlight"><pre><span></span>git merge NOMBRE_RAMA_B
 </pre></div>
 </li>
-<li><p>Aparece un conflicto entre las ramas a mezclarse por tener diferentes cambios al mismo archivo. Por lo que manualmente deben arreglar las diferencias y continuar con el merge.</p>
+<li><p>Verificar que los diferentes commits están en la rama master del remoto (GITHUB).</p>
 </li>
 </ol>
-<div class="highlight"><pre><span></span><span class="c1"># 1. Arregla los cambios</span>
-<span class="c1"># 2. Añade el archivo arreglado</span>
-git add <span class="o">[</span>archivo_arreglado<span class="o">]</span>
-<span class="c1"># 3. Guarda el cambio solo haciendo</span>
-git commit -m <span class="s2">&quot;Conflicto solucionado&quot;</span>
-</pre></div>
 
 </div>
 </div>
@@ -13717,11 +13779,19 @@ git commit -m <span class="s2">&quot;Conflicto solucionado&quot;</span>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="C&#243;mo-funiona-un-Merge?">C&#243;mo funiona un Merge?<a class="anchor-link" href="#C&#243;mo-funiona-un-Merge?">&#182;</a></h2><p>Un merge es la forma de unir la historia de ramas separadas e integrarlas en una sola rama.</p>
-<p>Git automáticamente une los commits a menos que existan conflictos en ambas ramas.</p>
-<center>
-<img src="images/merge.png" width=80%>
-</center>
+<h1 id="Materiales-de-Estudio-Avanzado">Materiales de Estudio Avanzado<a class="anchor-link" href="#Materiales-de-Estudio-Avanzado">&#182;</a></h1><ul>
+<li><p><a href="https://www.udemy.com/course/the-ultimate-git-5-day-challenge/">The Ultimate GIT 5-day Challenge</a></p>
+</li>
+<li><p><a href="https://learngitbranching.js.org/">Learn GIT Visually</a></p>
+</li>
+<li><p><a href="https://www.udemy.com/course/git-bash/">GIT for Windows</a></p>
+</li>
+<li><p><a href="https://www.gitkraken.com/git-client">GIT Kraken</a></p>
+</li>
+<li><p><a href="https://www.gitkraken.com/learn-git">GIT Kraken Tutorials</a></p>
+</li>
+</ul>
+
 </div>
 </div>
 </div>
