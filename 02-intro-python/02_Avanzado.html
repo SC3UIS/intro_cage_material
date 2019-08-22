@@ -13089,7 +13089,7 @@ div#notebook {
 
 <!-- Loading mathjax macro -->
 <!-- Load mathjax -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_HTML"></script>
     <!-- MathJax configuration -->
     <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -13117,17 +13117,7 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><img src="images/python.png"></p>
-<h2 id="Segunda-parte:-Jupyter-Notebook-y-Numpy">Segunda parte: Jupyter Notebook y Numpy<a class="anchor-link" href="#Segunda-parte:-Jupyter-Notebook-y-Numpy">&#182;</a></h2><p>Ahora vamos a explorar una segunda interfaz interactiva, que integra <code>Python</code> con otros elementos de programación</p>
-<ol>
-<li>Abrir un terminal en Linux<br>
-<code>CTRL</code>+<code>ALT</code>+<code>T</code></li>
-<li>Ir al directorio donde estamos trabajando<br>
-<code>cd Escritorio/Taller_01/</code></li>
-<li>Abrir la interfaz digitando<br>
-<code>jupyter notebook &amp;</code><br>
-Debe abrirse una pestaña en su navegador de internet</li>
-</ol>
-
+<h2 id="Segunda-parte:-Computaci&#243;n-Cient&#237;fica">Segunda parte: Computaci&#243;n Cient&#237;fica<a class="anchor-link" href="#Segunda-parte:-Computaci&#243;n-Cient&#237;fica">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -13209,26 +13199,13 @@ Debe abrirse una pestaña en su navegador de internet</li>
     <span class="k">return</span> <span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">3</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
 
 
-<span class="sd">&quot;&quot;&quot;2. Definimos un dominio X, esto genera un array de numpy,</span>
-<span class="sd">en este caso un array unidimensional, es decir un vector&quot;&quot;&quot;</span>
+<span class="sd">&quot;&quot;&quot;2. Definimos un rango de valores para X en intervalos de 0.1&quot;&quot;&quot;</span>
 <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">)</span>
 
-<span class="c1"># Para limpiar la salida de una celda, selecciónela, digite</span>
-<span class="c1"># ESC y, sin soltarlo, pulse la letra R y luego la Y</span>
-</pre></div>
 
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;3. Evaluamos la función en el array x&quot;&quot;&quot;</span>
+<span class="sd">&quot;&quot;&quot;3. Evaluamos la función en el array x&quot;&quot;&quot;</span>
 <span class="n">y</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
 
 <span class="sd">&quot;&quot;&quot;4. Mostramos la gráfica&quot;&quot;&quot;</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;$x^3 * cos(x)$&#39;</span><span class="p">)</span>
@@ -13246,10 +13223,15 @@ Debe abrirse una pestaña en su navegador de internet</li>
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;5. Incluir más detalles en la gráfica&quot;&quot;&quot;</span>
 
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;$x^3 * cos(x)$&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;$x^3cos(x)$&#39;</span><span class="p">)</span>
+
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Comportamiento de f(x)&#39;</span><span class="p">)</span> 
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;$Dominio$&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;$Rango_5$&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
+
 <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
@@ -13270,20 +13252,22 @@ Debe abrirse una pestaña en su navegador de internet</li>
 <li>Las operaciones entre arrays de NumPy se realizan <strong>elemento a elemento</strong></li>
 </ul>
 <p>Ejemplo:</p>
-<p>$c_{ij} = a_{ij} + b{ij}$</p>
+<p>Sumar 2 matrices de $100x100$ y almacenar el resultado en otra matriz.</p>
+<p>$C_{ij} = A_{ij} + B{ij}$</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">N</span><span class="p">,</span><span class="n">M</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span>
-<span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">10000</span><span class="p">)</span>
-<span class="n">a</span> <span class="o">=</span> <span class="n">a</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="n">M</span><span class="p">)</span> <span class="c1"># reshape es un método nativo de los arrays de numpy</span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">10000</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="n">M</span><span class="p">)</span>
 <span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">10000</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="n">M</span><span class="p">)</span>
+
 <span class="n">c</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">([</span><span class="mi">100</span><span class="p">,</span><span class="mi">100</span><span class="p">])</span>
 </pre></div>
 
@@ -13291,6 +13275,15 @@ Debe abrirse una pestaña en su navegador de internet</li>
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><br>
+<br></p>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -13307,6 +13300,15 @@ Debe abrirse una pestaña en su navegador de internet</li>
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><br>
+<br></p>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -13343,7 +13345,8 @@ Debe abrirse una pestaña en su navegador de internet</li>
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">e</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Constantes</span>
+<span class="n">np</span><span class="o">.</span><span class="n">e</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">inf</span>
 </pre></div>
 
     </div>
@@ -13356,59 +13359,8 @@ Debe abrirse una pestaña en su navegador de internet</li>
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">pi</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mi">4</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Funciones básicas</span>
+<span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13419,6 +13371,9 @@ Debe abrirse una pestaña en su navegador de internet</li>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p><br>
+<br>
+<br></p>
 <h2 id="&#191;Qu&#233;-es-exactamente-un-array?">&#191;Qu&#233; es exactamente un array?<a class="anchor-link" href="#&#191;Qu&#233;-es-exactamente-un-array?">&#182;</a></h2><p>Un array de NumPy es una colección de N elementos, igual que una secuencia en Python (por ejemplo, una lista). Tiene las mismas propiedades que una secuencia y algunas más.
 Para crear un array, la forma más directa es pasarle una secuencia a la función <code>np.array</code></p>
 
@@ -13430,13 +13385,47 @@ Para crear un array, la forma más directa es pasarle una secuencia a la funció
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Lista en Python</span>
+<span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="n">a</span> <span class="o">*</span> <span class="mi">3</span>
 </pre></div>
 
     </div>
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><br></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Array de 1 dimensión en Numpy</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
+<span class="n">a</span> <span class="o">*</span> <span class="mi">3</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><br>
+<br></p>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13463,6 +13452,7 @@ Para crear un array, la forma más directa es pasarle una secuencia a la funció
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p><br></p>
 <p>NumPy intentará automáticamente construir un array con el tipo adecuado teniendo en cuenta los datos de entrada, aunque nosotros podemos forzarlo.</p>
 
 </div>
@@ -13532,7 +13522,7 @@ Para crear un array, la forma más directa es pasarle una secuencia a la funció
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Atributos-y-funciones-de-arrays">Atributos y funciones de arrays<a class="anchor-link" href="#Atributos-y-funciones-de-arrays">&#182;</a></h2><p>Una vez se ha creado un array es posible acceder a información sobre su estado.</p>
+<h2 id="Creaci&#243;n-de-arrays-en-m&#250;ltiples-dimensiones">Creaci&#243;n de arrays en m&#250;ltiples dimensiones<a class="anchor-link" href="#Creaci&#243;n-de-arrays-en-m&#250;ltiples-dimensiones">&#182;</a></h2><p><img src="images/array_dims_np.png" width=70%></p>
 
 </div>
 </div>
@@ -13542,7 +13532,9 @@ Para crear un array, la forma más directa es pasarle una secuencia a la funció
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Forma del array</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 1D array</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">])</span>
+
 <span class="n">a</span><span class="o">.</span><span class="n">shape</span>
 </pre></div>
 
@@ -13556,8 +13548,11 @@ Para crear un array, la forma más directa es pasarle una secuencia a la funció
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Total de bytes que ocupa este array</span>
-<span class="n">a</span><span class="o">.</span><span class="n">nbytes</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 2D array</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mf">5.2</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">,</span> <span class="mf">4.5</span><span class="p">],</span>
+              <span class="p">[</span><span class="mf">9.1</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">]])</span>
+
+<span class="n">b</span><span class="o">.</span><span class="n">shape</span>
 </pre></div>
 
     </div>
@@ -13570,36 +13565,13 @@ Para crear un array, la forma más directa es pasarle una secuencia a la funció
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Número de dimensiones de un array</span>
-<span class="n">a</span><span class="o">.</span><span class="n">ndim</span>
-</pre></div>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 3D array</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">9</span><span class="p">],</span> <span class="p">[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">]],</span>
+              <span class="p">[[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">]],</span>
+              <span class="p">[[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">2</span><span class="p">]],</span>
+              <span class="p">[[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">]]])</span>
 
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Suma de elementos</span>
-<span class="n">a</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Mínimo, máximo y media</span>
-<span class="n">a</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="n">a</span><span class="o">.</span><span class="n">max</span><span class="p">(),</span> <span class="n">a</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">c</span><span class="o">.</span><span class="n">shape</span>
 </pre></div>
 
     </div>
@@ -13610,74 +13582,8 @@ Para crear un array, la forma más directa es pasarle una secuencia a la funció
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Creaci&#243;n-de-arrays">Creaci&#243;n de arrays<a class="anchor-link" href="#Creaci&#243;n-de-arrays">&#182;</a></h2><h4 id="1-D:">1-D:<a class="anchor-link" href="#1-D:">&#182;</a></h4>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
-<span class="n">a</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="2-D,-3-D,-...">2-D, 3-D, ...<a class="anchor-link" href="#2-D,-3-D,-...">&#182;</a></h4>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">],[</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">],[</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">12</span><span class="p">]])</span>
-<span class="n">b</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">b</span><span class="o">.</span><span class="n">ndim</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">b</span><span class="o">.</span><span class="n">shape</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
+<p><br>
+<br></p>
 <h2 id="Funciones-para-crear-arrays">Funciones para crear arrays<a class="anchor-link" href="#Funciones-para-crear-arrays">&#182;</a></h2><p>En la práctica, rara vez creamos los arrays pasando los elementos de uno en uno...</p>
 <h4 id="Separaci&#243;n-equidistante">Separaci&#243;n equidistante<a class="anchor-link" href="#Separaci&#243;n-equidistante">&#182;</a></h4>
 </div>
@@ -13701,7 +13607,7 @@ Para crear un array, la forma más directa es pasarle una secuencia a la funció
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">)</span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">)</span> 
 </pre></div>
 
     </div>
@@ -13839,7 +13745,7 @@ Para crear un array, la forma más directa es pasarle una secuencia a la funció
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span>np.random.randint<span class="o">?</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13852,8 +13758,8 @@ Para crear un array, la forma más directa es pasarle una secuencia a la funció
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">low</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">high</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
-<span class="c1"># Note qué pasa si rodamos esta celda nuevamente</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Ejecute esta celda múltiples veces.</span>
+<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">low</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">high</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13879,6 +13785,8 @@ Para crear un array, la forma más directa es pasarle una secuencia a la funció
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p><br>
+<br></p>
 <h3 id="Las-im&#225;genes-tambien-son-arrays!">Las im&#225;genes tambien son arrays!<a class="anchor-link" href="#Las-im&#225;genes-tambien-son-arrays!">&#182;</a></h3>
 </div>
 </div>
@@ -13889,8 +13797,10 @@ Para crear un array, la forma más directa es pasarle una secuencia a la funció
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">lena</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s1">&#39;images/lena.png&#39;</span><span class="p">)</span>
+
 <span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">lena</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">lena</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+
 <span class="n">lena</span>
 </pre></div>
 
@@ -13903,7 +13813,8 @@ Para crear un array, la forma más directa es pasarle una secuencia a la funció
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Indexado-de-arrays">Indexado de arrays<a class="anchor-link" href="#Indexado-de-arrays">&#182;</a></h2><p>Una de las herramientas mas importantes a la hora de trabajar con arrays es el indexado. Consiste en seleccionar elementos aislados o secciones de un array. Nosotros vamos a ver la indexación básica, pero existen técnica de indexación avanzada que convierten los arrays en herramientas potentísimas.</p>
-<h4 id="1-D-Arrays">1-D Arrays<a class="anchor-link" href="#1-D-Arrays">&#182;</a></h4>
+<h3 id="1-D-Arrays">1-D Arrays<a class="anchor-link" href="#1-D-Arrays">&#182;</a></h3><p><img src="images/1d_array.png"></p>
+
 </div>
 </div>
 </div>
@@ -13950,7 +13861,8 @@ Para crear un array, la forma más directa es pasarle una secuencia a la funció
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Para <strong>arrays multidimensionales</strong>, los índices son tuplas de enteros según las dimensiones del array.</p>
+<h3 id="2-D-Arrays">2-D Arrays<a class="anchor-link" href="#2-D-Arrays">&#182;</a></h3><p><img src="images/2d_array.png"></p>
+<p>Para <strong>arrays</strong> en 2D o 3D, es necesario especificar todos los ejes que se quieren indexar.</p>
 
 </div>
 </div>
@@ -13972,7 +13884,29 @@ Para crear un array, la forma más directa es pasarle una secuencia a la funció
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>En <strong>2D</strong> la primera dimensión corresponde a las <strong>filas</strong>, la segunda a <strong>columnas</strong></p>
+<p>Si usamos un solo índice, recibimos toda la fila correspondiente a ese índice.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Para obtener un elemento en específico, damos los índices para el axis 0 (Filas) y axis 1 (Columnas).</p>
+<p>SEPARADOS POR COMA</p>
 
 </div>
 </div>
@@ -13993,7 +13927,9 @@ Para crear un array, la forma más directa es pasarle una secuencia a la funció
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>No solo podemos recuperar un elemento aislado, sino tambien porciones del array, utilizando la sintaxis <code>[&lt;inicio&gt;:&lt;final&gt;:&lt;salto&gt;]</code></p>
+<p><br>
+<br></p>
+<p>No solo podemos recuperar un elemento aislado, sino tambien porciones del array, utilizando la sintaxis <code>[&lt;inicio&gt;:&lt;final&gt;:&lt;paso&gt;]</code> para cada axis.</p>
 <h4 id="Obtener-las-dos-filas-de-la-mitad">Obtener las dos filas de la mitad<a class="anchor-link" href="#Obtener-las-dos-filas-de-la-mitad">&#182;</a></h4>
 </div>
 </div>
@@ -14050,6 +13986,95 @@ Para crear un array, la forma más directa es pasarle una secuencia a la funció
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">lena</span><span class="p">[</span><span class="mi">128</span><span class="p">:</span><span class="mi">384</span><span class="p">,</span> <span class="mi">128</span><span class="p">:</span><span class="mi">384</span><span class="p">],</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Ejercicio-1a:">Ejercicio 1a:<a class="anchor-link" href="#Ejercicio-1a:">&#182;</a></h3><ol>
+<li>Crear un array <code>z1</code> de 3x4 lleno de ceros de tipo entero.</li>
+<li>Crear un array <code>z2</code> de 3x4 lleno de ceros salvo la primera fila que serán todo unos.</li>
+<li>Crear un array <code>z3</code> de 3x4 lleno de ceros salvo la última fila que será el rango entre 5 y 8</li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Ejercicio-1b.">Ejercicio 1b.<a class="anchor-link" href="#Ejercicio-1b.">&#182;</a></h3><ol>
+<li>Crea un vector de 10 elementos, siendo los impares unos y los pares doses.</li>
+<li>Crea un <code>tablero de ajedrez</code>, con unos en las casillas negras y ceros en las blancas.</li>
+</ol>
+<p>Puede mostrar el tablero de ajedrez usando <code>plt.imshow(array)</code></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 
     </div>
@@ -14245,7 +14270,7 @@ y para producto punto entre vectores <code>np.dot</code>)</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Reducciones-b&#225;sicas">Reducciones b&#225;sicas<a class="anchor-link" href="#Reducciones-b&#225;sicas">&#182;</a></h3><h4 id="1-D-arrays">1-D arrays<a class="anchor-link" href="#1-D-arrays">&#182;</a></h4>
+<h2 id="Reducciones-b&#225;sicas">Reducciones b&#225;sicas<a class="anchor-link" href="#Reducciones-b&#225;sicas">&#182;</a></h2><h3 id="1-D-arrays">1-D arrays<a class="anchor-link" href="#1-D-arrays">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -14387,69 +14412,6 @@ y para producto punto entre vectores <code>np.dot</code>)</p>
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Ejercicios">Ejercicios<a class="anchor-link" href="#Ejercicios">&#182;</a></h1><h3 id="Ejercicio-1.">Ejercicio 1.<a class="anchor-link" href="#Ejercicio-1.">&#182;</a></h3><ol>
-<li>Crear un array <code>z1</code> de 3x4 lleno de ceros de tipo entero.</li>
-<li>Crear un array <code>z2</code> de 3x4 lleno de ceros salvo la primera fila que serán todo unos.</li>
-<li>Crear un array <code>z3</code> de 3x4 lleno de ceros salvo la última fila que será el rango entre 5 y 8</li>
-</ol>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Ejercicio-2.">Ejercicio 2.<a class="anchor-link" href="#Ejercicio-2.">&#182;</a></h3><ol>
-<li>Crea un vector de 10 elementos, siendo los impares unos y los pares doses.</li>
-<li>Crea un <code>tablero de ajedrez</code>, con unos en las casillas negras y ceros en las blancas.</li>
-</ol>
-<p>Puede mostrar el tablero de ajedrez usando <code>plt.imshow(array)</code></p>
-
-</div>
-</div>
-</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
@@ -14479,9 +14441,9 @@ y para producto punto entre vectores <code>np.dot</code>)</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Ejercicio-3.">Ejercicio 3.<a class="anchor-link" href="#Ejercicio-3.">&#182;</a></h2><ol>
-<li>Crea una matriz aleatoria 5x5 y halla los valores mínimo y máximo.</li>
-<li>Normaliza esa matriz entre 0 y 1</li>
+<h2 id="Ejercicio-2a.">Ejercicio 2a.<a class="anchor-link" href="#Ejercicio-2a.">&#182;</a></h2><ol>
+<li>Crea una matriz aleatoria 5x5 de enteros entre (100, 200). y halle el valor máximo en cada columna.</li>
+<li>Reste la media de esta matriz y divida por la desviación estandar. ¿Qué sucedió?</li>
 </ol>
 
 </div>
@@ -14578,7 +14540,20 @@ y para producto punto entre vectores <code>np.dot</code>)</p>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]])</span>
-<span class="n">a</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span>
+<span class="n">a</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span>
 </pre></div>
 
     </div>
@@ -14663,6 +14638,9 @@ y para producto punto entre vectores <code>np.dot</code>)</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p><br>
+<br>
+<br></p>
 <h2 id="Manejo-de-Archivos">Manejo de Archivos<a class="anchor-link" href="#Manejo-de-Archivos">&#182;</a></h2><h3 id="Tablas">Tablas<a class="anchor-link" href="#Tablas">&#182;</a></h3><p>Demos una mirada al archivo <code>/data/populations.txt</code>,<br>
 por ejemplo utilizando <code>gedit</code></p>
 <table>
@@ -14722,21 +14700,20 @@ por ejemplo utilizando <code>gedit</code></p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Ejercicio:">Ejercicio:<a class="anchor-link" href="#Ejercicio:">&#182;</a></h2><p>Genere un gráfico para observar el cambio en la población de liebres y de linces a lo largo de los años</p>
+<h3 id="Ejercicio-3a:">Ejercicio 3a:<a class="anchor-link" href="#Ejercicio-3a:">&#182;</a></h3><ol>
+<li>Genere un gráfico para observar el cambio en la población de liebres y de linces a lo largo de los años.</li>
+<li>Suponga que la columna de linces tiene un error, y los datos están reportados en miles, cuando en realidad eran centenares. Corrija la columna respectiva y almacene la tabla con un nuevo nombre, utilizando:</li>
+</ol>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Almacenar datos en formato texto</span>
-
-<span class="c1"># Suponga que se ha cometido un error, y los datos de población de linces,</span>
-<span class="c1"># reportados en miles, se trataba en realidad de centenares. Corrija la</span>
-<span class="c1"># columna respectiva y almacene la tabla con un nuevo nombre utilizando:</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># YOUR CODE HERE!</span>
 
 <span class="n">np</span><span class="o">.</span><span class="n">savetxt</span><span class="p">(</span><span class="s1">&#39;data/pop2.txt&#39;</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=</span><span class="s1">&#39;%5.i&#39;</span><span class="p">,</span>  <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
@@ -14770,7 +14747,7 @@ por ejemplo utilizando <code>gedit</code></p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s1">&#39;data/ones.npy&#39;</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
@@ -14813,6 +14790,10 @@ por ejemplo utilizando <code>gedit</code></p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p><br>
+<br>
+<br>
+<br></p>
 <h2 id="An&#225;lisis-de-Vinos">An&#225;lisis de Vinos<a class="anchor-link" href="#An&#225;lisis-de-Vinos">&#182;</a></h2><p>Usando los resultados de un análisis químico de vinos obtenidos de la misma región en Italia pero de tres diferentes cultivos. Examine el archivo <code>data/wine.csv</code> con <code>gedit</code></p>
 <p>Los atributos del dataset son:</p>
 <ol>
@@ -14847,7 +14828,7 @@ por ejemplo utilizando <code>gedit</code></p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">set_printoptions</span><span class="p">(</span><span class="n">suppress</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">precision</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
@@ -14857,29 +14838,88 @@ por ejemplo utilizando <code>gedit</code></p>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
 
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[17]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>array([[   1.  ,   14.23,    1.71, ...,    1.04,    3.92, 1065.  ],
-       [   1.  ,   13.2 ,    1.78, ...,    1.05,    3.4 , 1050.  ],
-       [   1.  ,   13.16,    2.36, ...,    1.03,    3.17, 1185.  ],
-       ...,
-       [   3.  ,   13.27,    4.28, ...,    0.59,    1.56,  835.  ],
-       [   3.  ,   13.17,    2.59, ...,    0.6 ,    1.62,  840.  ],
-       [   3.  ,   14.13,    4.1 , ...,    0.61,    1.6 ,  560.  ]])</pre>
+    </div>
+</div>
 </div>
 
 </div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
 
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Librer&#237;as-Avanzadas-en-Python-para-Comunidad-Cient&#237;fica">Librer&#237;as Avanzadas en Python para Comunidad Cient&#237;fica<a class="anchor-link" href="#Librer&#237;as-Avanzadas-en-Python-para-Comunidad-Cient&#237;fica">&#182;</a></h2><h4 id="Pandas---An&#225;lisis-de-Datos"><a href="https://pandas.pydata.org/">Pandas</a> - An&#225;lisis de Datos<a class="anchor-link" href="#Pandas---An&#225;lisis-de-Datos">&#182;</a></h4><h4 id="Scikit-Learn---Miner&#237;a-de-Datos-y-Machine-Learning"><a href="https://scikit-learn.org/stable/#">Scikit-Learn</a> - Miner&#237;a de Datos y Machine Learning<a class="anchor-link" href="#Scikit-Learn---Miner&#237;a-de-Datos-y-Machine-Learning">&#182;</a></h4><h4 id="Seaborn---Visualizaci&#243;n-de-Datos-basada-en-Matplotlib"><a href="https://seaborn.pydata.org/">Seaborn</a> - Visualizaci&#243;n de Datos basada en Matplotlib<a class="anchor-link" href="#Seaborn---Visualizaci&#243;n-de-Datos-basada-en-Matplotlib">&#182;</a></h4><h4 id="Sympy---Librer&#237;a-para-Matem&#225;tica-Simb&#243;lica"><a href="https://www.sympy.org/en/index.html">Sympy</a> - Librer&#237;a para Matem&#225;tica Simb&#243;lica<a class="anchor-link" href="#Sympy---Librer&#237;a-para-Matem&#225;tica-Simb&#243;lica">&#182;</a></h4><h4 id="Astropy----Colecci&#243;n-de-paquetes-dise&#241;ados-para-Astronom&#237;a"><a href="www.astropy.org">Astropy</a> -  Colecci&#243;n de paquetes dise&#241;ados para Astronom&#237;a<a class="anchor-link" href="#Astropy----Colecci&#243;n-de-paquetes-dise&#241;ados-para-Astronom&#237;a">&#182;</a></h4><h4 id="Dask---Librer&#237;a-para-Computaci&#243;n-Paralela-en-Python"><a href="https://docs.dask.org/en/latest/">Dask</a> - Librer&#237;a para Computaci&#243;n Paralela en Python<a class="anchor-link" href="#Dask---Librer&#237;a-para-Computaci&#243;n-Paralela-en-Python">&#182;</a></h4><h4 id="Keras---Framework-de-Alto-Nivel-para-Deep-Learning"><a href="https://keras.io/">Keras</a> - Framework de Alto Nivel para Deep Learning<a class="anchor-link" href="#Keras---Framework-de-Alto-Nivel-para-Deep-Learning">&#182;</a></h4><h4 id="Pytorch---Framework-de-Alto-Nivel-para-Deep-Learning"><a href="https://pytorch.org/">Pytorch</a> - Framework de Alto Nivel para Deep Learning<a class="anchor-link" href="#Pytorch---Framework-de-Alto-Nivel-para-Deep-Learning">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
 </div>
 </div>
 
